@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="id.bangkumis.pamnuts.ui.home.HomeFragment"
+        android:label="@string/menu_dashboard"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_user_detail"
+            app:destination="@id/nav_user_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_user_detail"
+        android:name="id.bangkumis.pamnuts.ui.home.DetailFragment"
+        android:label="User Detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="extra_name"
+            app:argType="string"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="id.bangkumis.pamnuts.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

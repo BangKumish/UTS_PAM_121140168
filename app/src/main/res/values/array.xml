@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="integer_skill_array">
+        <item>@drawable/ic_launcher_foreground</item>
+        <item>@drawable/ic_launcher_foreground</item>
+        <item>@drawable/ic_launcher_foreground</item>
+        <item>@drawable/ic_launcher_foreground</item>
+    </integer-array>
+
+    <string-array name="string_user_array">
+        <item>@string/first_name</item>
+        <item>@string/second_name</item>
+        <item>@string/third_name</item>
+        <item>@string/fourth_name</item>
+    </string-array>
+    <string-array name="string_email_array">
+        <item>joko@gmail.com</item>
+        <item>adi@gmail.com</item>
+        <item>bejo@gmail.com</item>
+        <item>anam@gmail.com</item>
+    </string-array>
+</resources>

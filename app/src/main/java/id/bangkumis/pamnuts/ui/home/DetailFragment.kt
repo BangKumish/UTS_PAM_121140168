@@ -1,11 +1,10 @@
 package id.bangkumis.pamnuts.ui.home
 
 import android.os.Bundle
-import android.service.autofill.UserData
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -45,7 +44,7 @@ class DetailFragment : Fragment() {
     }
 
     private fun readData(username: String) {
-        database = FirebaseDatabase.getInstance().getReference("users")
+        database = FirebaseDatabase.getInstance("https://pam-nuts-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("users")
         database.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
@@ -54,12 +53,12 @@ class DetailFragment : Fragment() {
 
                         if (user != null && username == user.username) {
                             val githubUsername = snapshot.child("githubUsername")
-                            val nik = snapshot.child("nik")
+                            val nik = snapshot.child("nim")
                             val email = snapshot.child("email")
 
-                            binding.textGithubUsername.text = githubUsername.toString()
-                            binding.textNik.text = nik.toString()
-                            binding.textEmail.text = email.toString()
+                            binding.textGithubUsername.text = user.githubUsername.toString()
+                            binding.textNik.text = user.nim.toString()
+                            binding.textEmail.text = user.email.toString()
                         }
                     }
                 }

@@ -1,73 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent"
+    android:background="@drawable/splash_screen"
+    android:padding="30dp"
     tools:context=".ui.home.DetailFragment">
 
-    <TextView
-        android:id="@+id/text_name"
-        android:layout_width="239dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="@dimen/detail_content_layout_marginStart"
-        android:layout_marginTop="152dp"
-        android:layout_marginEnd="@dimen/detail_content_layout_marginEnd"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="@dimen/detail_content_textSize"
-        app:layout_constraintBottom_toBottomOf="@+id/text_githubUsername"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="20dp">
 
-    <TextView
-        android:id="@+id/text_githubUsername"
-        android:layout_width="239dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="@dimen/detail_content_layout_marginStart"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="@dimen/detail_content_layout_marginEnd"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="@dimen/detail_content_textSize"
-        app:layout_constraintBottom_toBottomOf="@+id/text_nik"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/text_name"
-        app:layout_constraintVertical_bias="0.0" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:background="#b3b3b3"
+            >
 
-    <TextView
-        android:id="@+id/text_nik"
-        android:layout_width="239dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="@dimen/detail_content_layout_marginStart"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="@dimen/detail_content_layout_marginEnd"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="@dimen/detail_content_textSize"
-        app:layout_constraintBottom_toBottomOf="@+id/text_email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/text_githubUsername"
-        app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/black"
+                android:text="DATA USER"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/text_email"
-        android:layout_width="239dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="@dimen/detail_content_layout_marginStart"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="@dimen/detail_content_layout_marginEnd"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="@dimen/detail_content_textSize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/text_nik"
-        app:layout_constraintVertical_bias="0.0" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:layout_marginTop="10dp"
+                android:padding="1sp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/text_githubUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Github"
+                android:layout_marginTop="10dp"
+                android:padding="1sp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/text_nik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="NIM"
+                android:layout_marginTop="10dp"
+                android:padding="1sp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/text_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="email"
+                android:layout_marginTop="10dp"
+                android:padding="1sp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@android:color/transparent"-->
+<!--    tools:context=".ui.home.DetailFragment">-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/text_name"-->
+<!--        android:layout_width="239dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginStart="@dimen/detail_content_layout_marginStart"-->
+<!--        android:layout_marginTop="152dp"-->
+<!--        android:layout_marginEnd="@dimen/detail_content_layout_marginEnd"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="@dimen/detail_content_textSize"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/text_githubUsername"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/text_githubUsername"-->
+<!--        android:layout_width="239dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginStart="@dimen/detail_content_layout_marginStart"-->
+<!--        android:layout_marginTop="92dp"-->
+<!--        android:layout_marginEnd="@dimen/detail_content_layout_marginEnd"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="@dimen/detail_content_textSize"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/text_nik"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/text_name"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/text_nik"-->
+<!--        android:layout_width="239dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginStart="@dimen/detail_content_layout_marginStart"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:layout_marginEnd="@dimen/detail_content_layout_marginEnd"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="@dimen/detail_content_textSize"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/text_email"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/text_githubUsername"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/text_email"-->
+<!--        android:layout_width="239dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginStart="@dimen/detail_content_layout_marginStart"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:layout_marginEnd="@dimen/detail_content_layout_marginEnd"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="@dimen/detail_content_textSize"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/text_nik"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
